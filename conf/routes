@@ -13,4 +13,6 @@ GET     /message                    controllers.AsyncController.message
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-      
+PUT     /backoffice/translator/lang/:code       controllers.BackofficeController.addLang(code: String)
+DELETE  /backoffice/translator/lang/:code       controllers.BackofficeController.deleteLang(code: String)
+GET     /backoffice/translator/lang             controllers.BackofficeController.getAll

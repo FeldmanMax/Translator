@@ -1,0 +1,9 @@
+@(languages: Vector[Lang])
+
+<div data-name="lang-fragment">
+    <select data-name="lang-selector">
+        <option value="">Select</option>
+        @languages.map { lang =>
+            <option value="@lang.code">@lang.language</option> }
+    </select>
+</div>
