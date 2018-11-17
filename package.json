@@ -1,14 +1,29 @@
 {
-  "dependencies": {
-    "typescript": "^3.0.3"
-  },
-  "devDependencies": {
-    "@types/jest": "^23.3.2",
-    "jest": "^23.5.0",
-    "ts-jest": "^23.1.4"
+  "name": "translator",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Max Feldman",
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:FeldmanMax/Translator.git"
   },
   "scripts": {
+    "clean": "rm -rf public/javascripts",
+    "clean-build": "yarn run clean && yarn run build",
     "test": "jest",
     "build": "tsc"
+  },
+  "main": "./public/javascripts/index.js",
+  "types": "./public/javascripts/index.d.ts",
+  // "files": ["./app/javascripts/src/index.ts"],
+  "devDependencies": {
+    "typescript": "^3.0.3",
+    "@types/jest": "^23.3.0",
+    "jest": "^23.4.1",
+    "ts-jest": "^23.0.1"
+  },
+  "dependencies": {
+    "@types/accounting": "^0.4.1",
+    "accounting": "^0.4.1"
   }
 }
